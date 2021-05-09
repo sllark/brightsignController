@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+	<title>homepage Brightsign</title>
+	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+
+<video src="videos/mainVideo.m4v" id="mainVideo" autoplay loop preload="auto"></video>
+
+<div class="buttons">
+	<div class="homeButton" id="homeButton">
+		<img src="img/home3.svg">
+		<p>Home</p>
+	</div>
+	<div class="backButton" id="backButton">
+		<img src="img/arrow-left-alt1.svg">
+		<p>Back</p>
+	</div>
+</div>
+
+
+<script src="js/zingtouch.min.js"></script>
+<script>
+	 
+    var zt = new ZingTouch.Region(document.body);
+    
+
+    var homeButton = document.getElementById('homeButton');
+    zt.bind(homeButton, 'tap', function (e) {
+        console.log(e);
+        window.location.href = '/index.html';
+
+    }, false);
+
+ var backButton = document.getElementById('backButton');
+    zt.bind(backButton, 'tap', function (e) {
+        window.location.href = '/menu.html';
+    }, false);
+
+
+</script>
+
+</body>
+</html>

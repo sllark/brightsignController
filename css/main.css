@@ -1,0 +1,150 @@
+@font-face {
+    font-family: MBCorpoSTitle;
+    src: url('../font/MBCorpoSTitle-Regular.otf');
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: MBCorpoSTitle, sans-serif;
+
+    overflow: hidden;
+    position: relative;
+}
+
+#mainVideo{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+
+.menu{
+
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/touchscreen-background.jpg");
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4% 5% 3%;
+}
+
+
+.menu__container{
+    width: 100%;
+    height: 75%;
+
+    display: flex;
+    justify-content: space-between;
+}
+.menu__container img{
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+
+.menu__container__big{
+    width: 75%;
+    display: flex;
+}
+
+.menu__container__big img{
+
+    width: 100%;
+    height: auto;
+}
+
+
+
+.menu__container__small{
+    width: 23%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    /*border: 1px solid hotpink;*/
+}
+
+.menu__container__small img{
+    height: 32%;
+    width: auto;
+    object-fit: cover;
+}
+
+
+.menu__img{
+
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.menu__img img{
+    height: 65%;
+}
+
+.menu__img .mercedesLogo{
+    height: 75%;
+}
+
+
+
+.buttons{
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*transform: translateX(-50%);*/
+
+    display: flex;
+    background-color: #01b0ef;
+    z-index: 10;
+}
+
+.buttons > div{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    padding: 1rem ;
+}
+.buttons > div:first-of-type {
+    border-right: 2px solid rgba(255,255,255,0.2);
+}
+.buttons > div:hover{
+    cursor: pointer;
+}
+
+
+.buttons p{
+    margin-left: 1rem;
+    font-size: 22px;
+}
+
+.buttons img{
+    fill: white;
+    filter: invert(100%);
+}
+
+.sliderArrows{
+    background-color: #01b0ef!important;
+}
+
+.pdfEmbed{
+    width: 100vw;
+    height: 100vh;
+}
+

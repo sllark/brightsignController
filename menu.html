@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+
+
+<div class="menu">
+
+	<div class="menu__container">
+		
+		<div class="menu__container__big">
+			<img src="img/thumbnailsGreatAustralianDrive.jpg" id="bigDrive">
+		</div>
+		
+		<div class="menu__container__small">
+			<img src="img/thumbnailsRoadEfficiency.jpg" id="smallBusiness">
+			<img src="img/thumbnailsGreatAustralianDriveGallery.jpg" id="smallGallery">
+			<img src="img/thumbnailsVehicleSpecification.jpg" id="smallSpecs">
+		</div>
+	
+	</div>
+	
+	<div class="menu__img">
+		
+		<img src="img/mercedes-logo.png" alt="mercides" class="mercedesLogo">
+		<img src="img/roadEfficiencyLogo-2.png" alt="logo">
+	
+	</div>
+	
+</div>
+
+
+
+<script src="js/zingtouch.min.js"></script>
+<script>
+    var zt = new ZingTouch.Region(document.body);
+    
+    let bigDrive = document.getElementById('bigDrive');
+    let smallBusiness = document.getElementById('smallBusiness');
+    let smallGallery = document.getElementById('smallGallery');
+    let smallSpecs = document.getElementById('smallSpecs');
+    
+    zt.bind(bigDrive, 'tap', function(e){
+        window.location.href='/driver.html';
+    }, false);
+ 
+    zt.bind(smallBusiness, 'tap', function(e){
+        window.location.href='/business.html';
+    }, false);
+ 
+    zt.bind(smallGallery, 'tap', function(e){
+        window.location.href='/gallery.html';
+    }, false);
+ 
+    zt.bind(smallSpecs, 'tap', function(e){
+        window.location.href='/specs.html';
+    }, false);
+
+
+    
+    
+    window.addEventListener('load',function (e){
+        window.setTimeout(function (){
+            window.location.href='/index.html';
+        },30000)
+	     
+	     
+	     
+	     
+    })
+</script>
+
+
+
+
+</body>
+</html>

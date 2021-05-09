@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Image Gallery</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/splide.min.css">
+
+</head>
+<body>
+
+
+<div class="splide">
+	<div class="splide__track">
+		<ul class="splide__list">
+			<li class="splide__slide">
+				<img src="img/slideshow/1.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/2.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/3.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/4.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/5.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/6.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/7.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/8.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/9.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/10.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/11.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/12.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/13.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/14.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/15.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/16.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/17.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/18.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/19.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/20.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/21.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/22.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/23.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/24.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/25.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/26.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/27.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/28.jpg">
+			</li>
+			<li class="splide__slide">
+				<img src="img/slideshow/29.jpg">
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="buttons">
+	<div class="homeButton" id="homeButton">
+		<img src="img/home3.svg">
+		<p>Home</p>
+	</div>
+	<div class="backButton" id="backButton">
+		<img src="img/arrow-left-alt1.svg">
+		<p>Back</p>
+	</div>
+</div>
+
+
+<script src="js/splide.min.js"></script>
+<script src="js/zingtouch.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        new Splide('.splide', {
+            type: 'loop',
+            padding: '5rem',
+            width : '100vw',
+            height: '100vh',
+            cover  : true,
+            classes: {
+                arrow : 'splide__arrow sliderArrows',
+                pagination: 'splide__pagination your-class-pagination', // container
+            },
+        }).mount();
+        
+    });
+</script>
+
+<script>
+
+    var zt = new ZingTouch.Region(document.body);
+
+
+    var homeButton = document.getElementById('homeButton');
+    zt.bind(homeButton, 'tap', function (e) {
+        console.log(e);
+        window.location.href = '/index.html';
+
+    }, false);
+
+    var backButton = document.getElementById('backButton');
+    zt.bind(backButton, 'tap', function (e) {
+        window.location.href = '/menu.html';
+    }, false);
+
+
+</script>
+
+</body>
+</html>

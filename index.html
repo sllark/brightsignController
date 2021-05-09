@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+	<title>homepage Brightsign</title>
+	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+</head>
+<body>
+
+
+<video src="videos/mainVideo.m4v" id="mainVideo" autoplay loop preload="auto"></video>
+
+
+
+<script src="js/zingtouch.min.js"></script>
+<script>
+    var zt = new ZingTouch.Region(document.body);
+    var myElement = document.getElementById('mainVideo');
+    zt.bind(myElement, 'tap', function(e){
+        console.log('tapped video');
+        
+        window.location.href='/menu.html';
+        
+    }, false);
+
+
+</script>
+
+</body>
+</html>
